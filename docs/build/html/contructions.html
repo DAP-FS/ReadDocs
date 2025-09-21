@@ -1,0 +1,437 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-8.2.3, furo 2020.10.05.beta9"/>
+        <title>Regular Expression to Finite Automata - Regular Expressions in TOC</title>
+      <link rel="stylesheet" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/default.css" />
+    <link rel="stylesheet" href="_static/togglebutton.css" />
+    <link rel="stylesheet" href="_static/custom.css" />
+    <link rel="stylesheet" href="_static/styles/default.css?e5b958348873465b412359fd">
+    <link rel="stylesheet" href="_static/pygments.css?e5b958348873465b412359fd">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js" defer></script>
+      
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="./"></script>
+        <script src="./"></script>
+        <script src="./"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script src="./"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="_static/scripts/main.js?e5b958348873465b412359fd"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="page">
+  <header class="mobile-header">
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">Regular Expressions in TOC</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree sidebar-scroll">
+  <p class="caption" role="heading"><span class="caption-text">Course Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice.html">Practice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assessment.html">Assessment</a></li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <section id="regular-expression-to-finite-automata">
+<h1>Regular Expression to Finite Automata<a class="headerlink" href="#regular-expression-to-finite-automata" title="Link to this heading">¶</a></h1>
+<p>Converting regular expressions to finite automata is essential for implementing regex engines and understanding computational complexity. Let’s master Thompson’s construction and other systematic methods.</p>
+<div class="admonition-concept admonition">
+<p class="admonition-title">Construction Methods</p>
+<p><strong>Main Approaches:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Thompson’s Construction</strong>: Build NFA recursively from regex components</p></li>
+<li><p><strong>Direct Construction</strong>: Build DFA directly for simple patterns</p></li>
+<li><p><strong>Hybrid Method</strong>: NFA via Thompson’s, then convert to DFA</p></li>
+</ol>
+</div>
+</section>
+<section id="thompson-s-construction">
+<h1>Thompson’s Construction<a class="headerlink" href="#thompson-s-construction" title="Link to this heading">¶</a></h1>
+<p>Thompson’s method builds NFAs with ε-transitions by recursively combining smaller automata.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Base Cases for Thompson’s Construction</p>
+<p><strong>Empty Set (∅):</strong></p>
+</div><p><em>No accepting state - accepts nothing</em></p>
+<p><strong>Empty String (ε):</strong></p>
+<p><em>Start state is accepting - accepts only empty string</em></p>
+<p><strong>Single Symbol (a):</strong></p>
+<p><em>Accepts exactly the string “a”</em></p>
+
+</section>
+<section id="recursive-construction-rules">
+<h1>Recursive Construction Rules<a class="headerlink" href="#recursive-construction-rules" title="Link to this heading">¶</a></h1>
+<section id="union-a-b">
+<h2>Union (A + B)<a class="headerlink" href="#union-a-b" title="Link to this heading">¶</a></h2>
+<div class="admonition-example admonition">
+<p class="admonition-title">Union Construction: A + B</p>
+<p><strong>Given NFAs for A and B, construct NFA for A + B:</strong></p>
+</div><p><strong>Key Points:</strong>
+- New start state with ε-transitions to both A and B
+- New final state with ε-transitions from both final states
+- Original NFAs remain unchanged internally</p>
+
+</section>
+<section id="concatenation-ab">
+<h2>Concatenation (AB)<a class="headerlink" href="#concatenation-ab" title="Link to this heading">¶</a></h2>
+<div class="admonition-example admonition">
+<p class="admonition-title">Concatenation Construction: AB</p>
+<p><strong>Given NFAs for A and B, construct NFA for AB:</strong></p>
+</div><p><strong>Key Points:</strong>
+- A’s final state connects to B’s start state via ε-transition
+- A’s final state is no longer accepting
+- Only B’s final state accepts</p>
+
+</section>
+<section id="kleene-star-a">
+<h2>Kleene Star (A*)<a class="headerlink" href="#kleene-star-a" title="Link to this heading">¶</a></h2>
+<div class="admonition-example admonition">
+<p class="admonition-title">Kleene Star Construction: A*</p>
+<p><strong>Given NFA for A, construct NFA for A*:</strong></p>
+</div><p><strong>Key Points:</strong>
+- New start state (also accepting for ε)
+- ε-transition from start directly to final (for zero repetitions)
+- ε-transition from A’s final back to A’s start (for repetition)
+- New final state to maintain single-final-state property</p>
+
+</section>
+</section>
+<section id="complete-construction-examples">
+<h1>Complete Construction Examples<a class="headerlink" href="#complete-construction-examples" title="Link to this heading">¶</a></h1>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example 1: Regular Expression (a+b)*</p>
+<p><strong>Step-by-Step Construction:</strong></p>
+<p><strong>Step 1:</strong> Build NFAs for ‘a’ and ‘b’</p>
+</div><p><strong>Step 2:</strong> Union (a+b)</p>
+<p><strong>Step 3:</strong> Kleene Star (a+b)*</p>
+
+<div class="admonition-example admonition">
+<p class="admonition-title">Example 2: Regular Expression ab*c</p>
+<p><strong>Step-by-Step Construction:</strong></p>
+<p><strong>Step 1:</strong> Build NFAs for ‘a’, ‘b’, and ‘c’</p>
+<p><strong>Step 2:</strong> Build b*</p>
+</div><p><strong>Step 3:</strong> Concatenate a(b*)c</p>
+
+</section>
+<section id="direct-construction-methods">
+<h1>Direct Construction Methods<a class="headerlink" href="#direct-construction-methods" title="Link to this heading">¶</a></h1>
+<section id="for-simple-patterns">
+<h2>For Simple Patterns<a class="headerlink" href="#for-simple-patterns" title="Link to this heading">¶</a></h2>
+<div class="admonition-example admonition">
+<p class="admonition-title">Direct Construction: Pattern a*b+</p>
+<p><strong>Regular Expression:</strong> <span class="math notranslate nohighlight">\(a^*b^+\)</span></p>
+<p><strong>Direct NFA Construction:</strong></p>
+</div><p><strong>Explanation:</strong>
+- State q₀: Read zero or more a’s, then must see b
+- State q₁: Saw first b, need at least one more
+- State q₂: Accepting, can read more b’s</p>
+
+<div class="admonition-example admonition">
+<p class="admonition-title">Direct Construction: Pattern (ab)*</p>
+<p><strong>Regular Expression:</strong> <span class="math notranslate nohighlight">\((ab)^*\)</span></p>
+<p><strong>Direct NFA Construction:</strong></p>
+</div><p><strong>Explanation:</strong>
+- Start state q₀ is accepting (empty string accepted)
+- Cycle: a takes us to q₁, b returns to q₀
+- Only complete “ab” cycles are accepted</p>
+
+</section>
+<section id="complex-pattern-construction">
+<h2>Complex Pattern Construction<a class="headerlink" href="#complex-pattern-construction" title="Link to this heading">¶</a></h2>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example 3: Regular Expression (a+b)*abb</p>
+<p><strong>Pattern Analysis:</strong> Strings ending with “abb”</p>
+<p><strong>Optimized Direct Construction:</strong></p>
+</div><p><strong>State Meanings:</strong>
+- q₀: Haven’t started “abb” pattern
+- q₁: Saw ‘a’, looking for “bb”
+- q₂: Saw “ab”, need one more ‘b’
+- q₃: Saw “abb”, accepting (but can continue)</p>
+
+</section>
+</section>
+<section id="optimization-techniques">
+<h1>Optimization Techniques<a class="headerlink" href="#optimization-techniques" title="Link to this heading">¶</a></h1>
+<div class="admonition-concept admonition">
+<p class="admonition-title">State Minimization After Construction</p>
+<p><strong>Common Optimizations:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>ε-transition removal</strong>: Convert ε-NFA to NFA</p></li>
+<li><p><strong>State merging</strong>: Combine equivalent states</p></li>
+<li><p><strong>Dead state elimination</strong>: Remove unreachable states</p></li>
+<li><p><strong>DFA conversion</strong>: Use subset construction for determinism</p></li>
+</ol>
+</div>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example 4: Before and After Optimization</p>
+<p><strong>Before Optimization (Thompson’s result for a*):</strong></p>
+</div><p><strong>After Optimization:</strong></p>
+<p><strong>Savings:</strong> 4 states → 1 state, 5 transitions → 1 transition</p>
+
+</section>
+<section id="interactive-construction-practice">
+<h1>Interactive Construction Practice<a class="headerlink" href="#interactive-construction-practice" title="Link to this heading">¶</a></h1>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Practice 1: Build NFA for (a+b)*a</p>
+<p><strong>Challenge:</strong> Use Thompson’s construction to build an NFA for <span class="math notranslate nohighlight">\((a+b)^*a\)</span></p>
+<p><strong>Hint:</strong> First build NFAs for ‘a’, ‘b’, then union, then star, then concatenate with final ‘a’</p>
+<div class="toggle docutils container">
+<div class="admonition-solution admonition">
+<p class="admonition-title">Step-by-Step Solution</p>
+<p><strong>Final NFA:</strong></p>
+</div><p><strong>Explanation:</strong> This is the optimized version after ε-removal.</p>
+</div>
+</div>
+
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Practice 2: Build NFA for b*ab*</p>
+<p><strong>Challenge:</strong> Construct minimal NFA directly (not using Thompson’s)</p>
+<div class="toggle docutils container">
+<div class="admonition-solution admonition">
+<p class="admonition-title">Direct Construction Solution</p>
+</div><p><strong>Language:</strong> Any number of b’s, then one ‘a’, then any number of b’s.</p>
+</div>
+</div>
+
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Practice 3: Complex Pattern (aa+bb)*</p>
+<p><strong>Challenge:</strong> Build NFA for strings of even-length runs of identical symbols</p>
+<div class="toggle docutils container">
+<div class="admonition-solution admonition">
+<p class="admonition-title">Advanced Solution</p>
+</div><p><strong>States:</strong>
+- q₀: Ready for next pair (accepting)
+- q₁: Saw first ‘a’, need another
+- q₂: Saw first ‘b’, need another</p>
+</div>
+</div>
+
+</section>
+<section id="algorithm-complexity-analysis">
+<h1>Algorithm Complexity Analysis<a class="headerlink" href="#algorithm-complexity-analysis" title="Link to this heading">¶</a></h1>
+<div class="admonition-concept admonition">
+<p class="admonition-title">Construction Complexity Comparison</p>
+<div class="table-wrapper"><table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Time and Space Complexity</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25.0%"/>
+<col style="width: 25.0%"/>
+<col style="width: 25.0%"/>
+<col style="width: 25.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Method</strong></p></th>
+<th class="head"><p><strong>Time</strong></p></th>
+<th class="head"><p><strong>Space</strong></p></th>
+<th class="head"><p><strong>Notes</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Thompson’s</p></td>
+<td><p>O(m)</p></td>
+<td><p>O(m)</p></td>
+<td><p>m = regex length</p></td>
+</tr>
+<tr class="row-odd"><td><p>Direct NFA</p></td>
+<td><p>O(m)</p></td>
+<td><p>O(2^m)</p></td>
+<td><p>Worst case exponential</p></td>
+</tr>
+<tr class="row-even"><td><p>NFA to DFA</p></td>
+<td><p>O(2^n)</p></td>
+<td><p>O(2^n)</p></td>
+<td><p>n = NFA states</p></td>
+</tr>
+<tr class="row-odd"><td><p>Regex to DFA</p></td>
+<td><p>O(2^m)</p></td>
+<td><p>O(2^m)</p></td>
+<td><p>Combined approach</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<section id="construction-strategy-guide">
+<h2>Construction Strategy Guide<a class="headerlink" href="#construction-strategy-guide" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper"><table class="docutils align-default" id="id2">
+<caption><span class="caption-text">When to Use Each Method</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Method</strong></p></th>
+<th class="head"><p><strong>Best For</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Thompson’s Construction</p></td>
+<td><p>Complex nested expressions, systematic approach needed</p></td>
+</tr>
+<tr class="row-odd"><td><p>Direct NFA Construction</p></td>
+<td><p>Simple patterns, when minimal states are crucial</p></td>
+</tr>
+<tr class="row-even"><td><p>Direct DFA Construction</p></td>
+<td><p>Very simple patterns, when determinism is required</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hybrid (Thompson + Optimization)</p></td>
+<td><p>General purpose, balanced complexity and result size</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>💡 Construction Tips</p>
+<p><strong>Best Practices:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Start simple</strong>: Master base cases before complex nesting</p></li>
+<li><p><strong>Verify incrementally</strong>: Test each construction step</p></li>
+<li><p><strong>Optimize later</strong>: Get correct construction first, then minimize</p></li>
+<li><p><strong>Use symmetry</strong>: Look for patterns that can simplify construction</p></li>
+<li><p><strong>Consider alternatives</strong>: Sometimes direct construction beats Thompson’s</p></li>
+</ol>
+<p><strong>Common Errors:</strong>
+- Forgetting ε-transitions in Thompson’s method
+- Incorrect final state designation
+- Missing self-loops in star constructions
+- Wrong direction of transitions</p>
+</div>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
+<p>Master these construction techniques, then explore <a class="reference internal" href="practice.html"><span class="doc">Practice</span></a> for hands-on exercises and <a class="reference internal" href="assessment.html"><span class="doc">Assessment</span></a> for comprehensive testing of your automata construction skills!</p>
+</section>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2025, TOC Interactive Guide</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Regular Expression to Finite Automata</a></li>
+<li><a class="reference internal" href="#thompson-s-construction">Thompson’s Construction</a></li>
+<li><a class="reference internal" href="#recursive-construction-rules">Recursive Construction Rules</a><ul>
+<li><a class="reference internal" href="#union-a-b">Union (A + B)</a></li>
+<li><a class="reference internal" href="#concatenation-ab">Concatenation (AB)</a></li>
+<li><a class="reference internal" href="#kleene-star-a">Kleene Star (A*)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#complete-construction-examples">Complete Construction Examples</a></li>
+<li><a class="reference internal" href="#direct-construction-methods">Direct Construction Methods</a><ul>
+<li><a class="reference internal" href="#for-simple-patterns">For Simple Patterns</a></li>
+<li><a class="reference internal" href="#complex-pattern-construction">Complex Pattern Construction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optimization-techniques">Optimization Techniques</a></li>
+<li><a class="reference internal" href="#interactive-construction-practice">Interactive Construction Practice</a></li>
+<li><a class="reference internal" href="#algorithm-complexity-analysis">Algorithm Complexity Analysis</a><ul>
+<li><a class="reference internal" href="#construction-strategy-guide">Construction Strategy Guide</a></li>
+<li><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>

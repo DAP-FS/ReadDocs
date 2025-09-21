@@ -1,0 +1,200 @@
+/* Custom CSS for Furo theme optimization */
+
+/* Furo theme customizations */
+.content {
+    max-width: none;
+}
+
+/* Mobile improvements for Furo */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    
+    .sidebar-drawer {
+        width: 280px;
+    }
+}
+
+/* Toggle button styling for Furo theme */
+.toggle.header {
+    background-color: var(--color-admonition-background);
+    border: 1px solid var(--color-background-border);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toggle.header:hover {
+    background-color: var(--color-background-hover);
+}
+
+/* Custom admonition classes for Furo */
+.admonition.admonition-example {
+    border-left: 4px solid #0288d1;
+}
+
+.admonition.admonition-example > .admonition-title {
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+.admonition.admonition-exercise {
+    border-left: 4px solid #ff9800;
+}
+
+.admonition.admonition-exercise > .admonition-title {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.admonition.admonition-solution {
+    border-left: 4px solid #4caf50;
+}
+
+.admonition.admonition-solution > .admonition-title {
+    background-color: #e8f5e8;
+    color: #388e3c;
+}
+
+.admonition.admonition-concept {
+    border-left: 4px solid #9c27b0;
+}
+
+.admonition.admonition-concept > .admonition-title {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+/* TikZ diagram styling for Furo */
+.tikz-figure {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: var(--color-background-secondary);
+    border-radius: 0.5rem;
+}
+
+.tikz-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+/* Math expression styling for Furo */
+.math {
+    margin: 1.5rem 0;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Table styling for Furo mobile */
+@media (max-width: 768px) {
+    table.docutils {
+        font-size: 0.85em;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    table.docutils th,
+    table.docutils td {
+        padding: 0.5rem 0.3rem;
+        min-width: 100px;
+    }
+}
+
+/* Code block improvements for Furo */
+.highlight {
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* Content spacing improvements */
+.content .section {
+    margin-bottom: 3rem;
+}
+
+.content h1, .content h2, .content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* List improvements */
+.content ul, .content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Responsive improvements for Furo sidebar */
+@media (max-width: 968px) {
+    .sidebar-tree {
+        font-size: 0.9rem;
+    }
+    
+    .sidebar-tree .toctree-l1 > a {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .tikz-figure {
+    background-color: var(--color-background-hover);
+}
+
+[data-theme="dark"] .toggle.header {
+    border-color: var(--color-background-border);
+}
+
+/* Print styles */
+@media print {
+    .tikz-figure {
+        break-inside: avoid;
+        background-color: white !important;
+    }
+    
+    .toggle.header {
+        display: none;
+    }
+    
+    .admonition {
+        break-inside: avoid;
+        margin: 1rem 0;
+    }
+}
+
+/* Focus and accessibility improvements */
+.toggle.header:focus {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+}
+
+.admonition-title:focus {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styling for note and tip admonitions */
+.admonition.note, .admonition.tip {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.admonition.note > .admonition-title,
+.admonition.tip > .admonition-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
