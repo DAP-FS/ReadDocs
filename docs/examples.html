@@ -1,0 +1,396 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Practice" href="practice.html" /><link rel="prev" title="Regular Expressions in Theory of Computation" href="index.html" />
+
+    <meta name="generator" content="sphinx-8.2.3, furo 2020.10.05.beta9"/>
+        <title>Examples - Regular Expressions in TOC</title>
+      <link rel="stylesheet" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/default.css" />
+    <link rel="stylesheet" href="_static/togglebutton.css" />
+    <link rel="stylesheet" href="_static/custom.css" />
+    <link rel="stylesheet" href="_static/styles/default.css?29755954128f8b5e61cc613f">
+    <link rel="stylesheet" href="_static/pygments.css?29755954128f8b5e61cc613f">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js" defer></script>
+      
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="./"></script>
+        <script src="./"></script>
+        <script src="./"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script src="./"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="_static/scripts/main.js?29755954128f8b5e61cc613f"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="page">
+  <header class="mobile-header">
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">Regular Expressions in TOC</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+</a><form class="sidebar-search-container" method="get" action="search.html">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree sidebar-scroll">
+  <p class="caption" role="heading"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice.html">Practice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assessment.html">Assessment</a></li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h1>
+<p>This section provides worked examples progressing from basic to advanced regular expressions. Each example includes step-by-step explanations and language descriptions.</p>
+<section id="basic-examples">
+<h2>Basic Examples<a class="headerlink" href="#basic-examples" title="Link to this heading">¶</a></h2>
+<section id="example-1-simple-characters">
+<h3>Example 1: Simple Characters<a class="headerlink" href="#example-1-simple-characters" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(abc\)</span></p>
+<p><strong>Language</strong>: <span class="math notranslate nohighlight">\(L(abc) = \{abc\}\)</span></p>
+<p><strong>Description</strong>: Matches exactly the string “abc”</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Explanation</p>
+<p>This is the simplest case - literal concatenation of symbols. The language contains only one string.</p>
+</div>
+</div>
+</section>
+<section id="example-2-union-alternation">
+<h3>Example 2: Union/Alternation<a class="headerlink" href="#example-2-union-alternation" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(a + b\)</span></p>
+<p><strong>Language</strong>: <span class="math notranslate nohighlight">\(L(a + b) = \{a, b\}\)</span></p>
+<p><strong>Description</strong>: Matches either “a” or “b”</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Step-by-step</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(L(a) = \{a\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(L(b) = \{b\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(L(a + b) = L(a) \cup L(b) = \{a\} \cup \{b\} = \{a, b\}\)</span></p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="example-3-kleene-star">
+<h3>Example 3: Kleene Star<a class="headerlink" href="#example-3-kleene-star" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(a^*\)</span></p>
+<p><strong>Language</strong>: <span class="math notranslate nohighlight">\(L(a^*) = \{\epsilon, a, aa, aaa, aaaa, \ldots\}\)</span></p>
+<p><strong>Description</strong>: Zero or more repetitions of “a”</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Understanding Kleene Star</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((L(a))^0 = \{\epsilon\}\)</span> (zero repetitions)</p></li>
+<li><p><span class="math notranslate nohighlight">\((L(a))^1 = \{a\}\)</span> (one repetition)</p></li>
+<li><p><span class="math notranslate nohighlight">\((L(a))^2 = \{aa\}\)</span> (two repetitions)</p></li>
+<li><p><span class="math notranslate nohighlight">\(L(a^*) = \bigcup_{i=0}^{\infty} (L(a))^i\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="intermediate-examples">
+<h2>Intermediate Examples<a class="headerlink" href="#intermediate-examples" title="Link to this heading">¶</a></h2>
+<section id="example-4-combining-operations">
+<h3>Example 4: Combining Operations<a class="headerlink" href="#example-4-combining-operations" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\((a + b)^*\)</span></p>
+<p><strong>Language</strong>: All strings over alphabet <span class="math notranslate nohighlight">\(\{a, b\}\)</span></p>
+<p><strong>Description</strong>: Any sequence of a’s and b’s, including empty string</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Detailed Analysis</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(L(a + b) = \{a, b\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(L((a + b)^*) = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, \ldots\}\)</span></p></li>
+<li><p>This generates <span class="math notranslate nohighlight">\(\Sigma^*\)</span> where <span class="math notranslate nohighlight">\(\Sigma = \{a, b\}\)</span></p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="example-5-specific-patterns">
+<h3>Example 5: Specific Patterns<a class="headerlink" href="#example-5-specific-patterns" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(ab^*c\)</span></p>
+<p><strong>Language</strong>: Strings starting with “a”, followed by zero or more “b”s, ending with “c”</p>
+<p><strong>Examples</strong>: <span class="math notranslate nohighlight">\(\{ac, abc, abbc, abbbc, \ldots\}\)</span></p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Construction Process</p>
+<ol class="arabic simple">
+<li><p>Start with <span class="math notranslate nohighlight">\(a\)</span>: <span class="math notranslate nohighlight">\(L(a) = \{a\}\)</span></p></li>
+<li><p>Concatenate with <span class="math notranslate nohighlight">\(b^*\)</span>: <span class="math notranslate nohighlight">\(L(ab^*) = \{a, ab, abb, abbb, \ldots\}\)</span></p></li>
+<li><p>Concatenate with <span class="math notranslate nohighlight">\(c\)</span>: <span class="math notranslate nohighlight">\(L(ab^*c) = \{ac, abc, abbc, abbbc, \ldots\}\)</span></p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="example-6-multiple-unions">
+<h3>Example 6: Multiple Unions<a class="headerlink" href="#example-6-multiple-unions" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(a^*b^* + c^*\)</span></p>
+<p><strong>Language</strong>: Either (zero or more a’s followed by zero or more b’s) OR (zero or more c’s)</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Breaking Down the Union</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(L(a^*b^*) = \{\epsilon, a, b, aa, ab, bb, aaa, aab, abb, bbb, \ldots\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(L(c^*) = \{\epsilon, c, cc, ccc, \ldots\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(L(a^*b^* + c^*) = L(a^*b^*) \cup L(c^*)\)</span></p></li>
+<li><p>Note: <span class="math notranslate nohighlight">\(\epsilon\)</span> appears in both, but union eliminates duplicates</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="advanced-examples">
+<h2>Advanced Examples<a class="headerlink" href="#advanced-examples" title="Link to this heading">¶</a></h2>
+<section id="example-7-complex-patterns">
+<h3>Example 7: Complex Patterns<a class="headerlink" href="#example-7-complex-patterns" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\((a + b)^*a(a + b)^*\)</span></p>
+<p><strong>Language</strong>: All strings over <span class="math notranslate nohighlight">\(\{a, b\}\)</span> containing at least one “a”</p>
+<p><strong>Description</strong>: Any string that has at least one occurrence of the symbol “a”</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Advanced Analysis</p>
+<p>This pattern ensures at least one “a” by:
+1. <span class="math notranslate nohighlight">\((a + b)^*\)</span> - any prefix
+2. <span class="math notranslate nohighlight">\(a\)</span> - guaranteed “a”
+3. <span class="math notranslate nohighlight">\((a + b)^*\)</span> - any suffix</p>
+<p>Alternative representation: <span class="math notranslate nohighlight">\(\Sigma^* - b^*\)</span> (complement of strings with only b’s)</p>
+</div>
+</div>
+</section>
+<section id="example-8-even-odd-patterns">
+<h3>Example 8: Even/Odd Patterns<a class="headerlink" href="#example-8-even-odd-patterns" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\((aa)^*\)</span></p>
+<p><strong>Language</strong>: Strings with even number of a’s (including zero)</p>
+<p><strong>Examples</strong>: <span class="math notranslate nohighlight">\(\{\epsilon, aa, aaaa, aaaaaa, \ldots\}\)</span></p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Pattern Recognition</p>
+<p>This demonstrates how regular expressions can capture mathematical properties:
+- Even number = pairs of elements
+- <span class="math notranslate nohighlight">\((aa)^*\)</span> groups a’s in pairs
+- Only generates strings where <a href="#id1"><span class="problematic" id="id2">|string|</span></a> ≡ 0 (mod 2)</p>
+</div>
+</div>
+</section>
+<section id="example-9-practical-application">
+<h3>Example 9: Practical Application<a class="headerlink" href="#example-9-practical-application" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\((0 + 1)^*01(0 + 1)^*\)</span></p>
+<p><strong>Language</strong>: Binary strings containing “01” as a substring</p>
+<p><strong>Description</strong>: Any binary string that contains the pattern “01” somewhere</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Real-World Connection</p>
+<p>This type of pattern is useful for:
+- Finding specific bit patterns in computer science
+- Detecting state transitions (0→1)
+- Pattern matching in text processing</p>
+<p>Structure: [any prefix][required pattern][any suffix]</p>
+</div>
+</div>
+</section>
+</section>
+<section id="challenging-examples">
+<h2>Challenging Examples<a class="headerlink" href="#challenging-examples" title="Link to this heading">¶</a></h2>
+<section id="example-10-multiple-constraints">
+<h3>Example 10: Multiple Constraints<a class="headerlink" href="#example-10-multiple-constraints" title="Link to this heading">¶</a></h3>
+<p><strong>Regular Expression</strong>: <span class="math notranslate nohighlight">\(0^*(10^*10^*)^*\)</span></p>
+<p><strong>Language</strong>: Binary strings with even number of 1’s</p>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Complex Pattern Analysis</p>
+<p>Breaking down the structure:
+1. <span class="math notranslate nohighlight">\(0^*\)</span> - optional leading zeros
+2. <span class="math notranslate nohighlight">\((10^*10^*)^*\)</span> - pairs of 1’s separated by zeros
+3. Each iteration of the outer star adds exactly two 1’s
+4. Result: strings where number of 1’s ≡ 0 (mod 2)</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Alternative Construction</p>
+<p>This could also be built using state-based thinking:
+- State 0: even number of 1’s seen (accepting)
+- State 1: odd number of 1’s seen (non-accepting)
+- Transitions: 0 keeps state, 1 toggles state</p>
+</div>
+</div>
+</section>
+</section>
+<section id="practice-problems">
+<h2>Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">¶</a></h2>
+<p>Try constructing regular expressions for these languages:</p>
+<ol class="arabic simple">
+<li><p>Strings over <span class="math notranslate nohighlight">\(\{a, b\}\)</span> that start and end with the same symbol</p></li>
+<li><p>Binary strings representing multiples of 3</p></li>
+<li><p>Strings with no three consecutive identical characters</p></li>
+</ol>
+<div class="toggle docutils container">
+<div class="toggle admonition">
+<p class="admonition-title">Hints for Practice Problems</p>
+<ol class="arabic simple">
+<li><p>Consider cases: starts with a, starts with b</p></li>
+<li><p>Use modular arithmetic with 3 states</p></li>
+<li><p>Think about forbidden patterns and their complements</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
+<p>Ready to test your understanding? Move on to <a class="reference internal" href="practice.html"><span class="doc">Practice</span></a> for guided exercises, or jump to <a class="reference internal" href="assessment.html"><span class="doc">Assessment</span></a> for challenging problems.</p>
+</section>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="practice.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Practice</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2025, TOC Interactive Guide</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#basic-examples">Basic Examples</a><ul>
+<li><a class="reference internal" href="#example-1-simple-characters">Example 1: Simple Characters</a></li>
+<li><a class="reference internal" href="#example-2-union-alternation">Example 2: Union/Alternation</a></li>
+<li><a class="reference internal" href="#example-3-kleene-star">Example 3: Kleene Star</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#intermediate-examples">Intermediate Examples</a><ul>
+<li><a class="reference internal" href="#example-4-combining-operations">Example 4: Combining Operations</a></li>
+<li><a class="reference internal" href="#example-5-specific-patterns">Example 5: Specific Patterns</a></li>
+<li><a class="reference internal" href="#example-6-multiple-unions">Example 6: Multiple Unions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advanced-examples">Advanced Examples</a><ul>
+<li><a class="reference internal" href="#example-7-complex-patterns">Example 7: Complex Patterns</a></li>
+<li><a class="reference internal" href="#example-8-even-odd-patterns">Example 8: Even/Odd Patterns</a></li>
+<li><a class="reference internal" href="#example-9-practical-application">Example 9: Practical Application</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#challenging-examples">Challenging Examples</a><ul>
+<li><a class="reference internal" href="#example-10-multiple-constraints">Example 10: Multiple Constraints</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practice-problems">Practice Problems</a></li>
+<li><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>
