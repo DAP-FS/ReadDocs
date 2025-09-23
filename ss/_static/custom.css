@@ -1,0 +1,292 @@
+/* _static/custom.css - Mobile-First Design */
+
+/* =================================================================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   ================================================================= */
+
+/* Base mobile styles (applies to all screen sizes) */
+.wy-nav-content {
+    max-width: 100% !important;
+    padding: 1rem !important;
+}
+
+/* Tablet and larger screens */
+@media screen and (min-width: 768px) {
+    .wy-nav-content {
+        max-width: 90% !important;
+        padding: 1.618em 2em !important;
+    }
+}
+
+/* Desktop screens */
+@media screen and (min-width: 1024px) {
+    .wy-nav-content {
+        max-width: 1200px !important;
+    }
+}
+
+/* =================================================================
+   MOBILE-OPTIMIZED ADMONITION BOXES
+   ================================================================= */
+
+div.admonition {
+    border-radius: 8px;
+    border-left-width: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-wrap: break-word;
+}
+
+div.admonition p.admonition-title {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.75rem 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Concept Box - Blue */
+div.admonition.admonition-concept {
+    background-color: #EBF5FF;
+    border-color: #3498DB;
+}
+div.admonition.admonition-concept p.admonition-title {
+    background-color: #3498DB;
+}
+div.admonition.admonition-concept p.admonition-title::before { content: "🟦 "; }
+
+/* Example Box - Orange */
+div.admonition.admonition-example {
+    background-color: #FEF9E7;
+    border-color: #F39C12;
+}
+div.admonition.admonition-example p.admonition-title {
+    background-color: #F39C12;
+}
+div.admonition.admonition-example p.admonition-title::before { content: "🟧 "; }
+
+/* Note Box - Green */
+div.admonition.note {
+    background-color: #E8F8F5;
+    border-color: #1ABC9C;
+}
+div.admonition.note p.admonition-title {
+    background-color: #1ABC9C;
+}
+div.admonition.note p.admonition-title::before { content: "🟩 "; }
+
+/* Warning Box - Yellow */
+div.admonition.warning {
+    background-color: #FFF9C4;
+    border-color: #F1C40F;
+}
+div.admonition.warning p.admonition-title {
+    background-color: #F1C40F;
+    color: #333;
+}
+div.admonition.warning p.admonition-title::before { content: "🟨 "; }
+
+/* Exercise Box - Grey */
+div.admonition.admonition-exercise {
+    background-color: #F8F9FA;
+    border-color: #6C757D;
+}
+div.admonition.admonition-exercise p.admonition-title {
+    background-color: #6C757D;
+}
+div.admonition.admonition-exercise p.admonition-title::before { content: "📝 "; }
+
+/* Solution Box - Green */
+div.admonition.admonition-solution {
+    background-color: #E9F7EF;
+    border-color: #27AE60;
+}
+div.admonition.admonition-solution p.admonition-title {
+    background-color: #27AE60;
+}
+div.admonition.admonition-solution p.admonition-title::before { content: "💡 "; }
+
+/* =================================================================
+   MOBILE-OPTIMIZED INTERACTIVE MCQ STYLING
+   ================================================================= */
+
+.mcq-container {
+    background-color: #fdfdfd;
+    border: 2px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.mcq-question {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #2c3e50;
+}
+
+.mcq-option {
+    margin-bottom: 1rem;
+}
+
+.mcq-option label {
+    display: block;
+    padding: 1rem 1.25rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #dee2e6;
+    font-size: 1em;
+    line-height: 1.5;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.mcq-option label:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.mcq-option label:active {
+    transform: translateY(0);
+}
+
+/* Hide radio buttons */
+.mcq-option input[type="radio"] {
+    display: none;
+}
+
+/* Feedback styling */
+.mcq-feedback {
+    display: none;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-size: 1em;
+    line-height: 1.6;
+    border: 2px solid;
+}
+
+.mcq-option input[type="radio"]:checked + label + .mcq-feedback {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Correct feedback - Green */
+.mcq-feedback.correct {
+    background-color: #d4edda;
+    border-color: #27ae60;
+    color: #155724;
+}
+
+.mcq-feedback.correct::before {
+    content: "✅ ";
+    font-size: 1.2em;
+}
+
+/* Incorrect feedback - Red */
+.mcq-feedback.incorrect {
+    background-color: #f8d7da;
+    border-color: #e74c3c;
+    color: #721c24;
+}
+
+.mcq-feedback.incorrect::before {
+    content: "❌ ";
+    font-size: 1.2em;
+}
+
+/* =================================================================
+   MOBILE-SPECIFIC IMPROVEMENTS
+   ================================================================= */
+
+/* Touch-friendly buttons and links */
+@media screen and (max-width: 767px) {
+    .mcq-option label {
+        padding: 1.25rem;
+        min-height: 70px;
+        font-size: 1.1em;
+    }
+    
+    .mcq-question {
+        font-size: 1.3em;
+    }
+    
+    div.admonition {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Better math rendering on mobile */
+    .MathJax {
+        font-size: 1.1em !important;
+    }
+    
+    /* Tables responsive */
+    table {
+        font-size: 0.9em;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+}
+
+/* =================================================================
+   ENHANCED VISUAL ELEMENTS
+   ================================================================= */
+
+/* Better list styling */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Improved code blocks */
+code {
+    background-color: #f1f3f4;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Enhanced table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}

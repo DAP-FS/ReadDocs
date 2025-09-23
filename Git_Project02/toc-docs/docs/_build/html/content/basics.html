@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="&lt;no title&gt;" href="automata.html" /><link rel="prev" title="Theory of Computation Made Simple" href="../index.html" />
+
+    <meta name="generator" content="sphinx-8.2.3, furo 2020.10.05.beta9"/>
+        <title>Basics: What is Computation? - Theory of Computation - Made Simple</title>
+      <link rel="stylesheet" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/default.css" />
+    <link rel="stylesheet" href="../_static/clean.css" />
+    <link rel="stylesheet" href="../_static/styles/default.css?173b48bf4eb56e61e0cb6541">
+    <link rel="stylesheet" href="../_static/pygments.css?173b48bf4eb56e61e0cb6541">
+    
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: #000000;
+  
+  }
+</style>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js" defer></script>
+      
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/student-friendly.js"></script><script src="../_static/scripts/main.js?173b48bf4eb56e61e0cb6541"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="#101010" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="page">
+  <header class="mobile-header">
+    <label class="header-left nav-overlay-icon" for="__navigation">
+      <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+    </label>
+    <div class="header-center"><div class="brand">Theory of Computation - Made Simple</div></div>
+    <div class="header-right"></div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">Theory of Computation - Made Simple</span>
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder="Search" name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-tree sidebar-scroll">
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Basics: What is Computation?</a></li>
+</ul>
+
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <section id="basics-what-is-computation">
+<h1>Basics: What is Computation?<a class="headerlink" href="#basics-what-is-computation" title="Link to this heading">¶</a></h1>
+<div class="chapter-header">
+<h2>🧩 Chapter 1: Understanding Computation</h2>
+<p class="chapter-intro">Let's start with the very basics. No complex math, just simple ideas.</p>
+<div class="chapter-meta">
+<span>⏱️ 30 minutes</span> • <span>📖 Beginner level</span> • <span>🎯 2 key concepts</span>
+</div>
+</div><section id="what-you-ll-learn">
+<h2>What You’ll Learn<a class="headerlink" href="#what-you-ll-learn" title="Link to this heading">¶</a></h2>
+<p>By the end of this chapter, you’ll understand:</p>
+<p>✅ What “computation” really means (it’s simpler than you think!)
+✅ The difference between problems and algorithms</p>
+<div class="help-box">
+<h4>🆘 Need Help Getting Started?</h4>
+<button class="help-toggle" onclick="toggleHelp('start-help')">Click Here for Confidence Boost</button>
+<div class="help-content" id="start-help" style="display: none;">
+<p><strong>Feeling nervous?</strong> That's completely normal! Remember:</p>
+<ul>
+<li>This is designed for absolute beginners</li>
+<li>There's no rush - take your time</li>
+<li>Every expert was once a beginner</li>
+<li>You can always come back and re-read</li>
+</ul>
+</div>
+</div></section>
+<section id="simple-start-what-is-computation">
+<h2>Simple Start: What is Computation?<a class="headerlink" href="#simple-start-what-is-computation" title="Link to this heading">¶</a></h2>
+<p><strong>Computation</strong> is just following a set of steps to solve a problem.</p>
+<div class="simple-example">
+<h4>🍳 Real-Life Example: Making Toast</h4>
+<div class="example-steps">
+<div class="step-item">
+<span class="step-num">1</span>
+<span>Put bread in toaster</span>
+</div>
+<div class="step-item">
+<span class="step-num">2</span>
+<span>Set timer to 2 minutes</span>
+</div>
+<div class="step-item">
+<span class="step-num">3</span>
+<span>Wait for toast to pop up</span>
+</div>
+<div class="step-item">
+<span class="step-num">4</span>
+<span>Take out toast</span>
+</div>
+</div>
+<p class="example-note">
+<strong>That's computation!</strong> You followed clear steps to solve the "hungry" problem.
+  </p>
+</div><p><strong>In computer science terms:</strong>
+- <strong>Input:</strong> Bread + Hunger
+- <strong>Process:</strong> Toasting steps
+- <strong>Output:</strong> Toast (problem solved!)</p>
+<div class="help-box">
+<h4>🤔 Still Confused About Computation?</h4>
+<button class="help-toggle" onclick="toggleHelp('computation-help')">Get More Examples</button>
+<div class="help-content" id="computation-help" style="display: none;">
+<p><strong>More everyday computations:</strong></p>
+<ul>
+<li><strong>Getting dressed:</strong> Check weather → Choose clothes → Put them on</li>
+<li><strong>Finding a book:</strong> Think of title → Search library → Follow call numbers</li>
+<li><strong>Following GPS:</strong> Enter destination → Follow directions → Arrive</li>
+</ul>
+<p>See? You compute all day long! 🎉</p>
+</div>
+</div></section>
+<section id="your-first-exercise">
+<h2>Your First Exercise<a class="headerlink" href="#your-first-exercise" title="Link to this heading">¶</a></h2>
+<div class="exercise-box">
+<h4>✏️ Try This (Super Easy!)</h4>
+<p><strong>Task:</strong> Describe making a sandwich as a computation.</p>
+<div class="exercise-parts">
+<div class="part">
+<strong>Input:</strong> <span class="answer-hint">What do you start with?</span>
+</div>
+<div class="part">
+<strong>Process:</strong> <span class="answer-hint">What steps do you follow?</span>
+</div>
+<div class="part">
+<strong>Output:</strong> <span class="answer-hint">What do you end up with?</span>
+</div>
+</div>
+<div class="help-box">
+<button class="help-toggle" onclick="toggleHelp('sandwich-help')">Need Help? Click Here</button>
+<div class="help-content" id="sandwich-help" style="display: none;">
+<p><strong>Possible Answer:</strong></p>
+<ul>
+<li><strong>Input:</strong> Bread, filling, hunger</li>
+<li><strong>Process:</strong> Get bread → Add filling → Close sandwich</li>
+<li><strong>Output:</strong> Finished sandwich (hunger will be solved!)</li>
+</ul>
+<p>Your answer might be different - that's perfectly fine! 👍</p>
+</div>
+</div>
+</div><div class="progress-section">
+<button class="complete-btn" onclick="markComplete('basics')">
+    ✅ I understand computation! Mark as complete.
+  </button>
+</div></section>
+<section id="what-s-next">
+<h2>What’s Next?<a class="headerlink" href="#what-s-next" title="Link to this heading">¶</a></h2>
+<p>Fantastic! You now understand the most basic concept in Theory of Computation.</p>
+<p>👉 <strong>Ready for Chapter 2?</strong> Learn about <strong>Automata</strong> - machines that follow rules (just like your toaster!)</p>
+<div class="next-chapter">
+<a class="next-btn" href="automata.html">
+    🤖 Continue to Automata →
+  </a>
+</div></section>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="automata.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">&lt;no title&gt;</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../index.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+          <span class="copyright">Copyright &copy; 2025, CS Education Team</span> |
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+          <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree">
+          <ul>
+<li><a class="reference internal" href="#">Basics: What is Computation?</a><ul>
+<li><a class="reference internal" href="#what-you-ll-learn">What You’ll Learn</a></li>
+<li><a class="reference internal" href="#simple-start-what-is-computation">Simple Start: What is Computation?</a></li>
+<li><a class="reference internal" href="#your-first-exercise">Your First Exercise</a></li>
+<li><a class="reference internal" href="#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>
